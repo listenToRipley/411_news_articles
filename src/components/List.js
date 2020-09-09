@@ -3,7 +3,9 @@ import React, { Component } from 'react'
 class List extends Component {
 
     componentDidMount() {
-        this.props.fetchArticles
+        this.setState ({
+            articles: this.props.fetchArticles()
+        })
     }
 
     render() {
